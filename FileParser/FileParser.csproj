@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DD51919-B536-48D8-8883-E376B303ED33}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Spikes.FileParser</RootNamespace>
+    <AssemblyName>Spikes.FileParser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFileParser.cs" />
+    <Compile Include="Attribute Definitions\ColumnIndexAttribute.cs" />
+    <Compile Include="Attribute Definitions\ColumnDescriptionAttribute.cs" />
+    <Compile Include="Attribute Definitions\FieldLengthAttribute.cs" />
+    <Compile Include="Attribute Definitions\FileAttributeUtility.cs" />
+    <Compile Include="Attribute Definitions\IImportContract.cs" />
+    <Compile Include="Attribute Definitions\ImportColumn.cs" />
+    <Compile Include="Attribute Definitions\ImportDataAttribute.cs" />
+    <Compile Include="Attribute Definitions\ImportExtensionAttribute.cs" />
+    <Compile Include="Attribute Definitions\ImportFile.cs" />
+    <Compile Include="Attribute Definitions\ImportFooterAttribute.cs" />
+    <Compile Include="Attribute Definitions\ImportHeaderAttribute.cs" />
+    <Compile Include="Attribute Definitions\ImportTypeAttribute.cs" />
+    <Compile Include="Attribute Definitions\IsRequiredAttribute.cs" />
+    <Compile Include="EnumItem.cs" />
+    <Compile Include="EnumNotFoundException.cs" />
+    <Compile Include="EnumUtility.cs" />
+    <Compile Include="FieldLengthAttributeNotFoundException.cs" />
+    <Compile Include="ColumnIndexAttributeNotFoundException.cs" />
+    <Compile Include="ErrorOptions.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="FieldDefinition.cs" />
+    <Compile Include="HeaderOptions.cs" />
+    <Compile Include="ImportTypes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Response.cs" />
+    <Compile Include="Sections.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
